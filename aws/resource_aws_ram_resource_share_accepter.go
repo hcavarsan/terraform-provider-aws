@@ -128,6 +128,7 @@ func resourceAwsRamResourceShareAccepterCreate(d *schema.ResourceData, meta inte
 }
 
 func resourceAwsRamResourceShareAccepterRead(d *schema.ResourceData, meta interface{}) error {
+	time.Sleep(10 * time.Second)
 	accountID := meta.(*AWSClient).accountid
 	conn := meta.(*AWSClient).ramconn
 
